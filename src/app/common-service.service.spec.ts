@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DataService } from './data.service';
+import { CommonServiceService } from './common-service.service';
 
-describe('DataService', () => {
-  let service: DataService;
+describe('CommonServiceService', () => {
+  let service: CommonServiceService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DataService);
+    service = TestBed.inject(CommonServiceService);
   });
 
   it('should be created', () => {

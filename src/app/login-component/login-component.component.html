@@ -1,0 +1,9 @@
+<p>Reactive Form Validate Login Screen</p>
+<p style="text-align: center;">Login</p>
+<div class="Login">
+    <form [formGroup]="loginForm">
+    UserName : <input type="text" formControlName="userName"> <br><br>
+    password : <input type="password" formControlName="userPassword"><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="navigateToUser()">Login</button>
+</form>
+</div>

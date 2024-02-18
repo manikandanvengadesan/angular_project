@@ -1,1 +1,51 @@
-<p>users works!</p>
+<h1>Logged As {{loggedUser}}</h1>
+
+<h2>String interpolation:</h2>
+{{stringName}}
+<h2>Property Binding :</h2>
+<input type="text" [value]="inputValue">
+<h2>Event Binding :</h2>
+<button (click)="onEventBind()">Event binding</button>
+<h2>Two way binding :</h2>
+Enter Dept :&nbsp;<input type="text" [(ngModel)]="twoWayBind">     &nbsp;&nbsp;&nbsp;&nbsp;Selected Value:{{twoWayBind}} <br>   
+<button (click)="changeDept('CSE')">CSE</button> &nbsp; <button (click)="changeDept('Mech')">Mech</button>
+<br>
+
+
+
+<h2>Structural Directives: </h2>
+<p>Ngif</p>
+
+<p>ngClass</p>
+<p [ngClass]="{red: buttonColor == 'red',blue: buttonColor == 'blue'}">ChangeColor</p>
+<button (click)="changeColor('red')">Red</button><br>
+<button (click)="changeColor('blue')">Blue</button>
+
+
+<p>NgFor: </p>
+<ul *ngFor="let val of Values">
+    <li>{{val.Lang}}</li>
+</ul>
+
+
+<p>NgSwitch:</p>
+<input type="text" [(ngModel)]="name" placeholder="enter numeric numbers">
+<ul [ngSwitch]="name">
+    <li *ngSwitchCase="'1'">Clicked 1</li>
+    <li *ngSwitchCase="'2'">Clicked 2</li>
+    <li *ngSwitchCase="'3'">Clicked 3</li>
+</ul>
+
+
+<p>Pipes :</p>
+<input type="text" [(ngModel)]="nameValue" placeholder="enter name">
+<h4>UpperCase pipe : {{nameValue | uppercase}}</h4>
+<h4> lowercase pipe : {{nameValue | lowercase}}</h4>
+
+
+<p>NgIf :</p>
+<input type="checkbox" [(ngModel)]="myVar" ng-init="myVar = true">
+<div *ngIf="myVar">
+    <p>clicked checkbox</p>
+<hr>
+</div>
