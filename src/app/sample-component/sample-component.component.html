@@ -1,0 +1,30 @@
+<h1>Sample component</h1>
+<h1 ngClass="titleHead">Structural directives</h1>
+<h3 ngClass="subTitle" *ngIf="true">ngIf condition</h3>
+<h3 ngClass="subTitle">ngFor loop</h3>
+<h4 *ngFor="let data of values">{{data}}</h4>
+<h4 *ngFor="let one of object">Name:{{one.name}} | Place:{{one.place}}</h4>
+
+<h3 ngClass="subTitle">ngSwitch</h3>
+<ul [ngSwitch]="firstName">
+    <li *ngSwitchCase="'Deepak'">Deepak</li>
+    <li *ngSwitchCase="'Rahul'">Rahul</li>
+    <li *ngSwitchCase="'Prajeesh'">Prajeesh</li>
+</ul>
+
+<h2 ngClass="style"><span [ngStyle]="{color:'green'}">ngStyle</span> and <span [ngStyle]="{color:'yellow'}">ngClass</span> are used in this heading </h2>
+<h1 ngClass="titleHead">Pipes in Angular.js</h1>
+<h3 ngClass="subTitle">Date pipes</h3>
+<h4>{{demoDate}}</h4>
+<h4>{{demoDate | date }}</h4>
+<h4>{{demoDate | date:"dd-yyyy"}}</h4>
+<h3 ngClass="subTitle">String pipes</h3>
+<h4>{{nameValue | uppercase}}</h4>
+<h4>{{nameValue | lowercase}}</h4>
+<h4>{{nameValue | titlecase}}</h4>
+<h3 ngClass="subTitle">Json Pipes</h3>
+<h4>{{secondObject | json}}</h4>
+
+<h3 ngClass="subTitle">Custom pipes</h3>
+<h4>{{demoDate}}</h4>
+<h4>{{demoDate | age}}</h4>

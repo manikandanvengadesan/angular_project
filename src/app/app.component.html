@@ -1,0 +1,23 @@
+<h1 ngClass="style">Oneway Databinding</h1>
+<h2>{{name}}</h2>
+<h2 ngClass="titleHead">Property Binding</h2><br>
+<input type="text" [value]="name"><br><br>
+<input type="text" [value]="password"><br><br>
+<button [disabled]="buttonClick" class="btn">Click me</button>
+<h2 ngClass="titleHead">Event binding</h2>
+<button class="btn1" (click)="sample()">Click here</button>
+<br><br>
+<h1 ngClass="style">Twoway Databinding</h1>
+<input type="text" [(ngModel)]="name">
+<br><br>
+<h1 ngClass="style">Conditions</h1>
+<button (click)="conditions()">Conditions</button>
+<h1 ngClass="style">Services</h1>
+<button (click)="increment()">Increment</button>
+<button  (click)="decrement()">Decrement</button>
+<app-sample-component></app-sample-component>
+
+<p>click to navigate about component</p>
+<button (click)="onNavigate()">Login</button>
+<router-outlet></router-outlet>
+

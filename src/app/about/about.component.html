@@ -1,0 +1,13 @@
+<h1 ngClass="formHeader">Reactive form</h1>
+
+<div>
+    <form [formGroup]="myForm" (ngSubmit)="validateForm()">
+        <label ngClass="formTitle">Name: </label>
+        <input type="text" formControlName="nameField">
+        <span *ngIf="name && name.invalid && name.touched">Name is invalid</span><br>
+        <label ngClass="formTitle">Email: </label>
+        <input type="email" formControlName="email">
+        <span *ngIf="email && email.invalid && email.touched">Email is invalid</span><br>
+        <button>Submit</button>
+    </form>
+</div>
